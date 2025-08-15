@@ -8,5 +8,5 @@ export const shows = ref([
 ])
 
 export const showsChartData = computed(() =>
-	shows.value.map((show) => [show.ethic, show.realness, show.title, show.id])
+	shows.value.map((show) => [show.realness, show.ethic, show.title, show.id])
 )
