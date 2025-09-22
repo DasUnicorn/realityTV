@@ -6,6 +6,7 @@ import { inject } from 'vue'
 const selectedShow = inject('selectedShow')
 
 function selectShow(show) {
+	console.log("click")
 	Object.assign(selectedShow, show)
 }
 </script>
@@ -28,6 +29,7 @@ function selectShow(show) {
 .selected {
   background-color: #f0f0f0;
   border: 2px solid #2b35af;
+  border-radius: 5px;
   font-weight: bold;
 }
 </style>

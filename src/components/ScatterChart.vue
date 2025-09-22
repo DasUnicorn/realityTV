@@ -26,7 +26,8 @@ use([
 const selectedShow = inject('selectedShow');
 const showChartRef = ref(null);
 
-const option = {
+// ref weg?
+const option = ref({
 	xAxis: {
 		name: 'Realität',
 		nameLocation: 'middle',
@@ -84,7 +85,7 @@ const option = {
 			},
 		},
 	],
-};
+});
 
 
 function handleChartClick(event) {

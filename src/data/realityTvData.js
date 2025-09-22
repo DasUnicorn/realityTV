@@ -1,6 +1,6 @@
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 
-export const shows = [
+export const shows = ref([
 	{ id: 0, ethic: 5.5, realness: 2.5, viewcount: 290000, viewcountYear: 2024, title: 'Love Island VIP', info: 'Aus anderen RealityTV Formaten bekannte Personen ziehen in eine Villa im Ausland und Kämpfen um 50.000€ Sigprämie. Dafür müssen sie jedes Mal aufs neue eine Partner*in wählen. Wer nicht gewählt wird, muss die Villa verlassen. In Spielen müssen sich die "Couples" beweisen und regelmäßig kommen neue Personen hinzu. Am Ende gewinnt eines der Paare.' },
 	{ id: 1, ethic: 3.2, realness: 3.0, viewcount: 1430000 , viewcountYear: 2024, title: 'Der Bachelor', info: 'Eine Gruppe von Frauen kämpft um das Herz eines Mannes (später auch zei Männer im Kokurrenzkampf). Dafür werden in regelmäßigen Abschnitten Rosen verteilt. Nur wer eine Rose erhällt darf in der Villa bleiben. Alle anderen müssen gehen.' },
 	{ id: 2, ethic: 5.1, realness: 4.2, viewcount: 6400000 , viewcountYear: 2024, title: 'Too Hot to Handle: Germany', info: '10 Singles werden unter "falscher Prämisse" in eine RealitzTV Show eingeladen. Angeblich soll es sich um ein feuchtfröhliches Party Konzept handeln. Vor Ort müssen sie dann jedoch nach dem ersten Tag feststellen, getäuscht worden zu sein. Das Preisgeld von 200.000€ wird für jede sexuelle Handlung unter den Teilnehmenden reduziert.', reason: '', links: ['https://de.wikipedia.org/wiki/Too_Hot_to_Handle:_Germany'] },
@@ -16,7 +16,7 @@ export const shows = [
 	{ id: 12, ethic: 6.7, realness: 5.5, viewcount: 100000, title: 'The Getaway', info: ''},
 	{ id: 13, ethic: 2.5, realness: 5.5, viewcount: 3630000, title: 'The Ultimatum', info: ''},
 	{ id: 14, ethic: 5.6, realness: 6.2, viewcount: 2000000, title: '7 vs Wild', info: ''}
-]
+])
 
 export const showsChartData = computed(() =>
 	shows.value.map((show) => [show.realness, show.ethic, show.title, show.id, show.viewcount])
