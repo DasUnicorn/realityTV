@@ -26,7 +26,7 @@ use([
 const selectedShow = inject('selectedShow');
 const showChartRef = ref(null);
 
-const option = ref({
+const option = {
 	xAxis: {
 		name: 'Realität',
 		nameLocation: 'middle',
@@ -67,6 +67,9 @@ const option = ref({
 			symbolSize: 20,
 			data: showsChartData,
 			type: 'scatter',
+			symbolSize: function (data) {
+        return Math.sqrt(data[4]) / 60;
+      },
 			itemStyle: {
 				shadowBlur: 10,
 				shadowColor: 'rgba(120, 36, 50, 0.5)',
@@ -81,7 +84,7 @@ const option = ref({
 			},
 		},
 	],
-});
+};
 
 
 function handleChartClick(event) {
