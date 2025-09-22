@@ -70,7 +70,6 @@ defineProps(['title', 'ethic', 'realness', 'info', 'class'])
 
 .infotext {
 	padding: 10px 0px;
-	font-size: small;
 }
 
 .link {
