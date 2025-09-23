@@ -37,6 +37,7 @@ defineProps(['title', 'ethic', 'realness', 'info', 'class'])
 }
 .card {
 	padding: 20px;
+	height: 370px;
 }
 
 .values {

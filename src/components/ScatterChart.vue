@@ -121,7 +121,7 @@ watch(selectedShow, (newSelectedShow) => {
 
 <style scoped>
 .chart {
-	height: 100vh;
+	height: 90vh;
 	width: 50vw;
 }
 </style>
