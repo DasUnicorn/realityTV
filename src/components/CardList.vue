@@ -1,11 +1,11 @@
 <script setup>
 import { shows } from '@/data/realityTvData';
 import Card from './Card.vue';
-import { inject } from 'vue'
+import { inject, watch, toRaw } from 'vue'
 import { useVirtualList } from '@vueuse/core';
 
 const data = shows;
-const { list, containerProps, wrapperProps } = useVirtualList(data, { itemHeight: 370 })
+const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(data, { itemHeight: 370 })
 
 
 const selectedShow = inject('selectedShow')
@@ -13,6 +13,16 @@ const selectedShow = inject('selectedShow')
 function selectShow(show) {
 	Object.assign(selectedShow, show)
 }
+
+watch(
+  () => selectedShow.id,
+  (newId) => {
+    const index = toRaw(data.value).findIndex((item) => item.id === newId);
+    if (index !== -1) {
+      scrollTo(index);
+    }
+  },
+);
 </script>
 
 <template>
